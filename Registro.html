@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <link rel="stylesheet" href="LogRegStyle.css">
         <title>Registro de Cuenta</title>
+        <script>
+            //aqui va el javascript
+        </script>
     </head>
 
 
@@ -20,9 +23,10 @@
                     <input type="text" 
                     name="nombres" 
                     id="nombres" 
-                    required pattern="[a-z]{1-30}"
-                    title="Solo letras"
-                    placeholder="Nombre(s)">
+                    pattern="(?=.*[a-zA-Z]).{1,30}"
+                    title="Solo letras" 
+                    placeholder="Nombre(s)"
+                    required >
                     
                             
                     <br>
@@ -33,9 +37,10 @@
                     type="text" 
                     name="apellidos" 
                     id="apellidos" 
-                    required pattern="[a-z]{1-30}"
+                    pattern="(?=.*[a-zA-Z]).{1,30}"
                     title="Solo letras"
-                    placeholder="Apellidos">
+                    placeholder="Apellidos"
+                    required >
 
                     <br>
 
@@ -57,7 +62,8 @@
                     type="email" 
                     name="correoElectronico" 
                     id="correoElectronico" 
-                    placeholder="correo@electronico.com">
+                    placeholder="correo@electronico.com"
+                    required>
 
                     <br>
 
@@ -66,16 +72,32 @@
                     <input type="text" 
                     name="nombreDeUsuario" 
                     id="nombreDeUsuario" 
-                    placeholder="Contraseña">
+                    required minlength="1"
+                    placeholder="Nombre de usuario" 
+                    required>
 
                     <br>
 
-                    <label>Contraseña:</label>
+                    <label for="contraseña">Contraseña:</label>
                     <br>
                     <input type="password" 
                     name="contraseña" 
                     id="contraseña"
-                    placeholder="Contraseña">
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Debe contener una mayúscula, una minúscula, un número, un signo de puntuación y un mínimo de 8 caracteres" 
+                    placeholder="Contraseña"
+                    required>
+
+                    <br>
+
+                    <label for="validContra">Validar contraseña:</label>
+                    <br>
+                    <input type="password" 
+                    name="validContra" 
+                    id="validContra"
+                    title="Ambas contraseñas deben ser iguales"
+                    placeholder="Validar contraseña"
+                    required>
 
                     <br>        
 
