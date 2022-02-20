@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <link rel="stylesheet" href="LogRegStyle.css">
+        <title>Registro de Cuenta</title>
+    </head>
+
+
+    <body>
+        <div class="registroUsuario">
+            <h1>Registro de usuario</h1>
+            <div class="txt">
+                <form autocomplete="off" action="RegExito.html" method="post">
+                    <br>
+
+                    <label for="nombres">Nombre(s):</label>
+                    <br>
+                    <input type="text" 
+                    name="nombres" 
+                    id="nombres" 
+                    required pattern="[a-z]{1-30}"
+                    title="Solo letras"
+                    placeholder="Nombre(s)">
+                    
+                            
+                    <br>
+
+                    <label for="apellidos">Apellido(s):</label>
+                    <br>
+                    <input 
+                    type="text" 
+                    name="apellidos" 
+                    id="apellidos" 
+                    required pattern="[a-z]{1-30}"
+                    title="Solo letras"
+                    placeholder="Apellidos">
+
+                    <br>
+
+                    <label>Fecha de nacimiento:</label>
+                    <br>
+                    <input 
+                    type="date" 
+                    name="fechanac" 
+                    id="fechanac"
+                    min="1903-01-01"
+                    max="2021-01-01"
+                    required>
+
+                    <br>
+
+                    <label>Correo electrónico:</label>
+                    <br>
+                    <input 
+                    type="email" 
+                    name="correoElectronico" 
+                    id="correoElectronico" 
+                    placeholder="correo@electronico.com">
+
+                    <br>
+
+                    <label>Nombre de usuario:</label>
+                    <br>
+                    <input type="text" 
+                    name="nombreDeUsuario" 
+                    id="nombreDeUsuario" 
+                    placeholder="Contraseña">
+
+                    <br>
+
+                    <label>Contraseña:</label>
+                    <br>
+                    <input type="password" 
+                    name="contraseña" 
+                    id="contraseña"
+                    placeholder="Contraseña">
+
+                    <br>        
+
+                    <label>Imagen de perfil:</label>
+                    <br>
+                    <input 
+                    type="file" 
+                    name="imagenPerfil" 
+                    id="imagenPerfil"
+                    accept="image/png, image/jpg, image/jpeg"
+                    required>
+                    <br>
+                    <br>
+
+                    <input  type="submit" value="Registrar">
+                    
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

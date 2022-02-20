@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"> <!--Pa que jale el internet explorer-->
+        <link rel="stylesheet" href="LogRegStyle.css">
+        <title>Inicio de sesión</title>
+
+        <script>
+            //
+        </script>
+        
+    </head>
+ 
+    <body>
+        <div class="centro">
+            <h1>Inicio de sesión</h1>
+            
+            <div class="loginUsuario">
+                <form autocomplete="off" action="acceso.html" method="post"> <!--para que no se guarden los datos en el navegador-->
+                    
+                    <div class="texto">
+                        <label>Usuario:</label>
+                        <br>
+                        <input type="text" name="usuario"
+                        required minlength="1"
+                        title="Ingresa tu usuario"
+                        placeholder="Usuario">
+                        
+                        <br>
+
+                        <label>Contraseña:</label>
+                        <br>
+                        <input type="password" name="contraseña"
+                        required minlength="1"
+                        title="Ingresa tu contraseña"
+                        placeholder="Contraseña">
+                    </div>
+
+                    <input type="submit" value="Iniciar Sesión" title="Inicia sesión">
+
+                </form>
+            </div>
+            
+            <div class="registrarLink">
+                <b>¿No tienes cuenta? <a href="Registro.html" title="Crea tu cuenta">¡Registrate!</a></b>
+            </div>
+        </div> 
+   </body>
+</html>

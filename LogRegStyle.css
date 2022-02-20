@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(120deg,#83FF84,#F983FF );
+    height: 100vh;
+    overflow: auto;
+}
+
+/* Login.html  */
+.centro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centro h1{
+    background: rgb(255, 255, 255,.80);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 20px;
+
+}
+.loginUsuario{
+    background-color: rgba(255, 255, 255, 0.80);
+    border-radius: 5px;
+    padding: 10px;
+}
+.loginUsuario label{
+padding: 7px 7px;
+}
+.loginUsuario input[type=text], input[type=password]{
+    width: 90%;
+    margin: 8px 0px;
+    padding: 7px 10px;
+    border-radius: 9px;
+    border: 1px solid #ccc;
+    border-color:#ccc; 
+}
+.loginUsuario input[type=submit]{
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    cursor:pointer;
+}
+.loginUsuario input[type=submit]:hover{
+    color: rgb(155, 155, 155);
+    border: 2px solid #9B9B9B;
+}
+.registrarLink{
+    margin:15px 0;
+    text-align: center;
+    font-size: 14px;
+}
+.registrarLink a{
+    color:#2691d9;
+    text-decoration: none;
+}
+.registrarLink a:hover{
+text-decoration: underline;
+}
+
+/* Registro.html  */
+.registroUsuario{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.registroUsuario h1{
+    background: rgb(255, 255, 255,.80);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 20px;
+}
+.txt{
+    background-color: rgba(255, 255, 255, 0.80);
+    border-radius: 5px;
+    padding: 10px;
+}
+.txt label{
+    padding: 7px 7px;
+}
+.txt input[type=text],input[type=number], input[type=password],input[type=date],input[type=file],input[type=email]{
+    width: 90%;
+    margin: 8px 0px;
+    padding: 7px 10px;
+    border-radius: 9px;
+    border: 1px solid #ccc;
+    border-color:#ccc; 
+}
+.txt input[type=date]:hover{
+    cursor: pointer;
+}
+.txt input[type=submit]{
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    cursor:pointer;
+}
+.txt input[type=submit]:hover{
+    color: rgb(155, 155, 155);
+    border: 2px solid #9B9B9B;
+}
