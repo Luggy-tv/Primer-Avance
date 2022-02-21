@@ -4,10 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <link rel="stylesheet" href="LogRegStyle.css">
+        <link rel="script" href="validContra.js">
         <title>Registro de Cuenta</title>
-        <script>
-            //aqui va el javascript
-        </script>
+        <script src="validContra.js"></script>
     </head>
 
 
@@ -77,7 +76,7 @@
                     required>
 
                     <br>
-
+<!--
                     <label for="contraseña">Contraseña:</label>
                     <br>
                     <input type="password" 
@@ -92,14 +91,46 @@
 
                     <label for="validContra">Validar contraseña:</label>
                     <br>
-                    <input type="password" 
+                    <input 
+                    type="password" 
                     name="validContra" 
                     id="validContra"
                     title="Ambas contraseñas deben ser iguales"
                     placeholder="Validar contraseña"
                     required>
+               
+                    <br>     
+ -->
+                    <label>Contraseña :
+                        <input 
+                        name="password" 
+                        id="password" 
+                        type="password" 
+                        pattern="(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[.!#$-_]).{8,}"
+                        title="Debe contener una mayúscula, una minúscula, un número, un signo de puntuación y un mínimo de 8 caracteres" 
+                        placeholder="Contraseña"
+                        onkeyup='check();' 
+                        required
+                        >
+                    </label>
 
-                    <br>        
+                      <br>
+                    
+                    <label>Confirmar Contraseña:
+                        <input 
+                        type="password" 
+                        name="confirm_password" 
+                        id="confirm_password"  
+                        pattern="(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[.!#$-_]).{8,}" 
+                        title="Ambas contraseñas deben ser iguales"
+                        placeholder="Confirma Contraseña"
+                        onkeyup='check();' 
+                        required
+                        > 
+                    <span id='message'></span>
+                    </label>
+                    <br>
+              
 
                     <label>Imagen de perfil:</label>
                     <br>
@@ -109,7 +140,6 @@
                     id="imagenPerfil"
                     accept="image/png, image/jpg, image/jpeg"
                     required>
-                    <br>
                     <br>
 
                     <input  type="submit" value="Registrar">
