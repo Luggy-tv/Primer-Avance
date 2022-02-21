@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <link rel="stylesheet" href="LogRegStyle.css">
+        <link rel="stylesheet" href="RegStyle.css">
         <title>Registro de Cuenta</title>
         <script src="validContra.js"></script>
     </head>
@@ -11,115 +11,118 @@
 
     <body>
         <div class="registroUsuario">
-            <h1>Registro de usuario</h1>
-            <div class="txt">
-                <form autocomplete="off" action="RegExito.html" method="post">
-                    <br>
 
-                    <label for="nombres">Nombre(s):</label>
-                    <br>
-                    <input type="text" 
-                    name="nombres" 
-                    id="nombres" 
-                    pattern="[A-Za-z]{1,30}"
-                    title="Solo letras; maximo 30 letras" 
-                    placeholder="Nombre(s)"
-                    required >
-                    
-                            
-                    <br>
-
-                    <label for="apellidos">Apellido(s):</label>
-                    <br>
-                    <input 
-                    type="text" 
-                    name="apellidos" 
-                    id="apellidos" 
-                    pattern="[A-Za-z]{1,30}"
-                    title="Solo letras; maximo 30 letras"
-                    placeholder="Apellidos"
-                    required >
-
-                    <br>
-
-                    <label>Fecha de nacimiento:</label>
-                    <br>
-                    <input 
-                    type="date" 
-                    name="fechanac" 
-                    id="fechanac"
-                    min="1903-01-01"
-                    max="2021-01-01"
-                    required>
-
-                    <br>
-
-                    <label>Correo electrónico:</label>
-                    <br>
-                    <input 
-                    type="email" 
-                    name="correoElectronico" 
-                    id="correoElectronico" 
-                    placeholder="correo@electronico.com"
-                    required>
-
-                    <br>
-
-                    <label>Nombre de usuario:</label>
-                    <br>
-                    <input type="text" 
-                    name="nombreDeUsuario" 
-                    id="nombreDeUsuario" 
-                    pattern="[A-Za-z0-9\d\.\_\-]{1,15} "
-                    title="Solo letras, numeros y ciertos caracteres especiales(.-_); no mas de 15 caracteres"
-                    placeholder="Nombre de usuario" 
-                    required>
-
-                    <br>
-
-                    <label>Contraseña :
-                        <input 
-                        name="password" 
-                        id="password" 
-                        type="text" 
-                        pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[.!#$-_]).{8,16}$"
-                        title="Debe contener una mayúscula, una minúscula, un número, un caracter especial(.!#$-_); mínimo de 8 caracteres no mas de 16" 
-                        placeholder="Contraseña"
-                        onkeyup='check();' 
-                        required>
-                    </label>
-
-                      <br>
-                    
-                    <label>Confirmar Contraseña:
-                        <input 
-                        type="text" 
-                        name="confirm_password" 
-                        id="confirm_password"  
-                        pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[.!#$-_]).{8,16}$" 
-                        title="Ambas contraseñas deben ser iguales"
-                        placeholder="Confirma Contraseña"
-                        onkeyup='check();' 
-                        required> 
-                    <span id='message'></span>
-                    </label>
-                    <br>
-              
-
-                    <label>Imagen de perfil:</label>
-                    <br>
-                    <input 
-                    type="file" 
-                    name="imagenPerfil" 
-                    id="imagenPerfil"
-                    accept="image/png, image/jpg, image/jpeg"
-                    required>
-                    <br>
-
-                    <input  type="submit" value="Registrar">
-                    
-                </form>
+            <div class="title">
+                <h1>Registro de usuario</h1>
             </div>
+            
+
+                <form autocomplete="off" action="RegExito.html" method="post">
+                    
+                    <div class="detalles">  
+
+                        <div class="inputBox">
+                            <label for="nombres">Nombre(s):</label>
+                            <input type="text" 
+                            name="nombres" 
+                            id="nombres" 
+                            pattern="[A-Za-z]{1,30}"
+                            title="Solo letras; maximo 30 letras" 
+                            placeholder="Nombre(s)"
+                            required >
+                        </div>
+
+                        <div class="inputBox">
+                            <label for="apellidos">Apellido(s):</label>
+                            <input 
+                            type="text" 
+                            name="apellidos" 
+                            id="apellidos" 
+                            pattern="[A-Za-z]{1,30}"
+                            title="Solo letras; maximo 30 letras"
+                            placeholder="Apellidos"
+                            required >
+                        </div>
+                        
+                        <div class="inputBox">
+                            <label>Fecha de nacimiento:</label>
+                            <input 
+                            type="date" 
+                            name="fechanac" 
+                            id="fechanac"
+                            min="1903-01-01"
+                            max="2021-01-01"
+                            required>
+                        </div>
+
+                        <div class="inputBox">
+                            <label>Correo electrónico:</label>
+                            <input 
+                            type="email" 
+                            name="correoElectronico" 
+                            id="correoElectronico" 
+                            placeholder="correo@electronico.com"
+                            required>
+                        </div>
+
+                        <div class="inputBox">
+                            <label>Nombre de usuario:</label>
+                            <input type="text" 
+                            name="nombreDeUsuario" 
+                            id="nombreDeUsuario" 
+                            pattern="[A-Za-z0-9\d\.\_\-]{1,15} "
+                            title="Solo letras, numeros y ciertos caracteres especiales(.-_); no mas de 15 caracteres"
+                            placeholder="Nombre de usuario" 
+                            required>
+                        </div>
+
+                        <div class="inputBox">
+                            <label>Contraseña :
+                                <input 
+                                name="password" 
+                                id="password" 
+                                type="text" 
+                                pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[.!#$-_]).{8,16}$"
+                                title="Debe contener una mayúscula, una minúscula, un número, un caracter especial(.!#$-_); mínimo de 8 caracteres no mas de 16" 
+                                placeholder="Contraseña"
+                                onkeyup='check();' 
+                                required>
+                            </label>
+                        </div>
+
+                        <div class="inputBox">
+                            <label>Confirmar Contraseña:
+                                <input 
+                                type="text" 
+                                name="confirm_password" 
+                                id="confirm_password"  
+                                pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[.!#$-_]).{8,16}$" 
+                                title="Ambas contraseñas deben ser iguales"
+                                placeholder="Confirma Contraseña"
+                                onkeyup='check();' 
+                                required> 
+                            <span id='message'></span>
+                            </label>
+                        </div>
+
+                        <div class="inputBox">
+                            <label>Imagen de perfil:</label>
+                            <input 
+                            type="file" 
+                            name="imagenPerfil" 
+                            id="imagenPerfil"
+                            accept="image/png, image/jpg, image/jpeg"
+                            required>
+                        </div>
+
+                    </div>
+
+                    <div class="button">
+                        <input  type="submit" value="Registrar">
+                    </div>
+
+                </form>
+            
         </div>
     </body>
 </html>

@@ -12,17 +12,15 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
+    border-radius: 10px;
     transform: translate(-50%,-50%);
+    background: #ffffff;
 }
 .centro h1{
-    background: rgb(255, 255, 255,.80);
-    border-radius: 10px;
     text-align: center;
     padding: 10px 20px;
-
 }
 .loginUsuario{
-    background-color: rgba(255, 255, 255, 0.80);
     border-radius: 5px;
     padding: 10px;
 }
@@ -108,4 +106,7 @@ text-align: centerw;
 }
 #message{
     padding: 7px 7px;
-}*/
+}
+*/
+
+

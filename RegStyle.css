@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(120deg,#83FF84,#F983FF );
+
+}
+.registroUsuario{
+    max-width: 700px;
+    width: 100%;
+    background: #ffffff; 
+    padding: 25px 30px;
+    border-radius: 10px;
+}
+.registroUsuario h1{
+    text-align: center;
+    padding: 10px 20px;
+}
+.registroUsuario form .detalles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+form .detalles .inputBox{
+    width: calc( 100% / 2 - 20px);
+}
+.detalles  .inputBox label{
+    padding: 7px 7px;
+}
+.detalles .inputBox input{
+    width: 95%;
+    margin: 8px 0px;
+    padding: 7px 10px;
+    border-radius: 9px;
+    border: 1px solid #ccc;
+    border-color:#ccc; 
+}
+form .button input{
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    cursor:pointer;
+}
+form .button input:hover{
+    color: rgb(155, 155, 155);
+    border: 2px solid #9B9B9B;
+}
+
+@media (max-width:584px){
+    .registroUsuario{
+        max-width: 100%;
+    }
+    form .detalles .inputBox{
+        width: 100%;
+    }
+    .registroUsuario form .detalles{
+        max-height: 400px;
+        overflow-y: scroll;
+    }
+    .detalles::-webkit-scrollbar{
+        width: 0;
+    }
+}
+
