@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge"> <!--Pa que jale el internet explorer-->
-        <link rel="stylesheet" href="LogStyle.css">
+        <link rel="stylesheet" href="Styles/LogStyle.css">
         <title>Inicio de sesión</title>
-        <script src="validContra.js"></script>
+        <script src="JavaScript/validContra.js"></script>
         
     </head>
  
@@ -13,7 +13,7 @@
         <div class="centro">
             <h1>Inicio de sesión</h1>
             <div class="loginUsuario">
-                <form autocomplete="off" action="acceso.html" method="post"> <!--para que no se guarden los datos en el navegador-->
+                <form autocomplete="off" action="MainPage.html" method="post"> <!--para que no se guarden los datos en el navegador-->
                     <label>Usuario :
                         <input  type="text" 
                         name="usuarioLogin"
@@ -30,7 +30,7 @@
 
                     <label>Contraseña:
                         <br>
-                        <input type="text" 
+                        <input type="password" 
                         name="passwordLogin"
                         id="passwordLogin"
                         maxlength="16"

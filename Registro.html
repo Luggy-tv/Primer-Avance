@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <link rel="stylesheet" href="RegStyle.css">
+        <link rel="stylesheet" href="Styles/RegStyle.css">
         <title>Registro de Cuenta</title>
-        <script src="validContra.js"></script>
+        <script src="JavaScript/validContra.js"></script>
     </head>
 
 
@@ -23,7 +23,8 @@
 
                         <div class="inputBox">
                             <label for="nombres">Nombre(s):</label>
-                            <input type="text" 
+                            <input 
+                            type="text" 
                             name="nombres" 
                             id="nombres" 
                             pattern="[A-Za-z]{1,30}"
@@ -67,7 +68,8 @@
 
                         <div class="inputBox">
                             <label>Nombre de usuario:</label>
-                            <input type="text" 
+                            <input 
+                            type="text" 
                             name="nombreDeUsuario" 
                             id="nombreDeUsuario" 
                             pattern="[A-Za-z0-9\d\.\_\-]{1,15} "
@@ -79,9 +81,9 @@
                         <div class="inputBox">
                             <label>Contraseña :
                                 <input 
+                                type="password" 
                                 name="password" 
                                 id="password" 
-                                type="text" 
                                 pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[.!#$-_]).{8,16}$"
                                 title="Debe contener una mayúscula, una minúscula, un número, un caracter especial(.!#$-_); mínimo de 8 caracteres no mas de 16" 
                                 placeholder="Contraseña"
@@ -93,7 +95,7 @@
                         <div class="inputBox">
                             <label>Confirmar Contraseña:
                                 <input 
-                                type="text" 
+                                type="password" 
                                 name="confirm_password" 
                                 id="confirm_password"  
                                 pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[.!#$-_]).{8,16}$" 
