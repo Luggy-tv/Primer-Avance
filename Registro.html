@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <link rel="stylesheet" href="LogRegStyle.css">
-        <link rel="script" href="validContra.js">
         <title>Registro de Cuenta</title>
         <script src="validContra.js"></script>
     </head>
@@ -22,8 +21,8 @@
                     <input type="text" 
                     name="nombres" 
                     id="nombres" 
-                    pattern="(?=.*[a-zA-Z]).{1,30}"
-                    title="Solo letras" 
+                    pattern="[A-Za-z]{1,30}"
+                    title="Solo letras; maximo 30 letras" 
                     placeholder="Nombre(s)"
                     required >
                     
@@ -36,8 +35,8 @@
                     type="text" 
                     name="apellidos" 
                     id="apellidos" 
-                    pattern="(?=.*[a-zA-Z]).{1,30}"
-                    title="Solo letras"
+                    pattern="[A-Za-z]{1,30}"
+                    title="Solo letras; maximo 30 letras"
                     placeholder="Apellidos"
                     required >
 
@@ -71,62 +70,37 @@
                     <input type="text" 
                     name="nombreDeUsuario" 
                     id="nombreDeUsuario" 
-                    required minlength="1"
+                    pattern="[A-Za-z0-9\d\.\_\-]{1,15} "
+                    title="Solo letras, numeros y ciertos caracteres especiales(.-_); no mas de 15 caracteres"
                     placeholder="Nombre de usuario" 
                     required>
 
                     <br>
-<!--
-                    <label for="contraseña">Contraseña:</label>
-                    <br>
-                    <input type="password" 
-                    name="contraseña" 
-                    id="contraseña"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                    title="Debe contener una mayúscula, una minúscula, un número, un signo de puntuación y un mínimo de 8 caracteres" 
-                    placeholder="Contraseña"
-                    required>
 
-                    <br>
-
-                    <label for="validContra">Validar contraseña:</label>
-                    <br>
-                    <input 
-                    type="password" 
-                    name="validContra" 
-                    id="validContra"
-                    title="Ambas contraseñas deben ser iguales"
-                    placeholder="Validar contraseña"
-                    required>
-               
-                    <br>     
- -->
                     <label>Contraseña :
                         <input 
                         name="password" 
                         id="password" 
-                        type="password" 
-                        pattern="(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[.!#$-_]).{8,}"
-                        title="Debe contener una mayúscula, una minúscula, un número, un signo de puntuación y un mínimo de 8 caracteres" 
+                        type="text" 
+                        pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[.!#$-_]).{8,16}$"
+                        title="Debe contener una mayúscula, una minúscula, un número, un caracter especial(.!#$-_); mínimo de 8 caracteres no mas de 16" 
                         placeholder="Contraseña"
                         onkeyup='check();' 
-                        required
-                        >
+                        required>
                     </label>
 
                       <br>
                     
                     <label>Confirmar Contraseña:
                         <input 
-                        type="password" 
+                        type="text" 
                         name="confirm_password" 
                         id="confirm_password"  
-                        pattern="(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[.!#$-_]).{8,}" 
+                        pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[.!#$-_]).{8,16}$" 
                         title="Ambas contraseñas deben ser iguales"
                         placeholder="Confirma Contraseña"
                         onkeyup='check();' 
-                        required
-                        > 
+                        required> 
                     <span id='message'></span>
                     </label>
                     <br>

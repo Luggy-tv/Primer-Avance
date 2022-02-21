@@ -59,8 +59,12 @@ padding: 7px 7px;
 .registrarLink a:hover{
 text-decoration: underline;
 }
+#msLogin{
+text-align: centerw;
+}
 
 /* Registro.html  */
+/*
 .registroUsuario{
     position: absolute;
     top: 50%;
@@ -104,4 +108,4 @@ text-decoration: underline;
 }
 #message{
     padding: 7px 7px;
-}
+}*/
